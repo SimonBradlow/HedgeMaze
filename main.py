@@ -18,6 +18,7 @@ class Game:
         pg.display.gl_set_attribute(pg.GL_CONTEXT_FORWARD_COMPATIBLE_FLAG, True)
         self.screen = pg.Surface(VIRTUAL_RES).convert((255, 65280, 16711680, 0))
         pg.display.set_mode(REAL_RES, pg.DOUBLEBUF|pg.OPENGL)
+        pg.event.set_allowed([pg.QUIT, pg.KEYDOWN])
         self.clock = pg.time.Clock()
         self.delta_time = 1
         self.new_game()
